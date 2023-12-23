@@ -1,0 +1,10 @@
+#!/bin/bash
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+PROTECTED_BRANCHES="^(main)"
+
+if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]] 
+then
+    echo "🚫 push to master is prevented"
+    exit 1
+fi
