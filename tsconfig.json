@@ -19,6 +19,7 @@
       "@navigation": ["src/navigation/index"],
       "@types": ["src/types/index"],
       "@utils": ["src/utils/index"],
+      "@design-system": ["src/design-system/index"],
     },
     "plugins": [
       {

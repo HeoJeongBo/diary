@@ -6,7 +6,6 @@ module.exports = {
       {
         extensions: ['.svg'],
       },
-      'react-native-paper/babel',
     ],
     ['@babel/plugin-proposal-export-namespace-from'],
     [
@@ -29,6 +28,7 @@ module.exports = {
           '@types': './src/types',
           '@navigation': './src/navigation',
           '@utils': './src/utils',
+          '@design-system': './src/design-system',
         },
       },
     ],
