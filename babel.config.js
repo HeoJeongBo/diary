@@ -24,7 +24,12 @@ module.exports = {
           '.js',
           '.json',
         ],
-        alias: {},
+        alias: {
+          '@screens': './src/screens',
+          '@types': './src/types',
+          '@navigation': './src/navigation',
+          '@utils': './src/utils',
+        },
       },
     ],
     'react-native-reanimated/plugin',

@@ -14,7 +14,12 @@
     "lib": ["ES2017"],
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "paths": {},
+    "paths": {
+      "@screens": ["src/screens/index"],
+      "@navigation": ["src/navigation/index"],
+      "@types": ["src/types/index"],
+      "@utils": ["src/utils/index"],
+    },
     "plugins": [
       {
         "name": "typescript-styled-plugin",
