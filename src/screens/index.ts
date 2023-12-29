@@ -1,3 +1,3 @@
-import HomeScreen from './HomeScreen';
+import HomeTabScreen from './HomeScreen';
 
-export default { HomeScreen };
+export default { HomeTabScreen };

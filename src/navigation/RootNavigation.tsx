@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Screens from '@screens';
 import { ScreenType } from '@types';
 import { tsUtils } from '@utils';
+import BottomTabNavigation from './BottomTab';
 
 const RootStack = createNativeStackNavigator();
 
@@ -17,6 +18,11 @@ const RootNavigation = () => {
 
   return (
     <RootStack.Navigator>
+      <RootStack.Screen
+        name="BottomTab"
+        component={BottomTabNavigation}
+        options={defaultScreenOptions}
+      />
       {allScreens.map((screen) => (
         <RootStack.Screen
           key={screen.key}

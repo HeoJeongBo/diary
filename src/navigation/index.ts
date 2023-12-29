@@ -1,3 +1,4 @@
 import RootNavigation from './RootNavigation';
+import BottomTabNavigation from './BottomTab';
 
-export { RootNavigation };
+export { RootNavigation, BottomTabNavigation };
