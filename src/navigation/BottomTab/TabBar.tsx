@@ -19,8 +19,12 @@ const BOTTOM_TAB_UI_INFOS: Record<
     label: '홈',
   },
   MyInformationTab: {
-    iconName: 'pallette',
+    iconName: 'person',
     label: '내 정보',
+  },
+  LaboratoryTab: {
+    iconName: 'pallette',
+    label: '랩',
   },
 };
 
