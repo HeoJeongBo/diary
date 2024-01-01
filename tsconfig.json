@@ -1,3 +1,51 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-native",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "lib": ["ES2017"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@screens": ["src/screens/index"],
+      "@navigation": ["src/navigation/index"],
+      "@types": ["src/types/index"],
+      "@utils": ["src/utils/index"],
+      "@design-system": ["src/design-system/index"],
+      "@hooks/*": ["src/hooks/*"],
+    },
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "lint": {
+          "validProperties": [
+            "shadow-color",
+            "shadow-opacity",
+            "shadow-offset",
+            "shadow-radius",
+            "padding-horizontal",
+            "padding-vertical",
+            "margin-vertical",
+            "margin-horizontal",
+            "aspect-ratio",
+            "elevation"
+          ]
+        }
+      }
+    ]
+  },
+  "include": [
+    "src/**/*",
+    "App.tsx",
+    "global.d.ts"
+  ],
+  "exclude": ["node_modules", "babel.config.js"]
 }
