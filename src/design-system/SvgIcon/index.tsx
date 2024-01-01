@@ -13,7 +13,7 @@ const SvgICon = (props: SvgIconProps) => {
 
   return (
     <View style={{ width: size, height: size }}>
-      <SvgXml xml={Icons[iconName]} color={'black'} fill={'black'} />
+      <SvgXml xml={Icons[iconName]} color={'black'} />
     </View>
   );
 };
