@@ -2,8 +2,9 @@
 import SvgICon from './SvgIcon';
 import * as DS_CONSTANTS from './design-system.constants';
 import Colors, { ColorKey } from './Color';
+import Font from './Font';
 
 // import types
 import type { IconNames } from './SvgIcon/SvgIcon.types';
 
-export { SvgICon, IconNames, DS_CONSTANTS, ColorKey, Colors };
+export { SvgICon, IconNames, DS_CONSTANTS, ColorKey, Colors, Font };
