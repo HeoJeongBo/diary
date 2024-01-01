@@ -19,7 +19,7 @@ const BOTTOM_TAB_UI_INFOS: Record<
     label: '홈',
   },
   MyInformationTab: {
-    iconName: 'person',
+    iconName: 'pallette',
     label: '내 정보',
   },
 };
@@ -49,7 +49,10 @@ const TabBar = (props: TabBarProps) => {
             key={route.key}
             style={styles.item}
             onPress={() => handlePress(routeName)}>
-            <SvgICon iconName={BOTTOM_TAB_UI_INFOS[routeName].iconName} />
+            <SvgICon
+              iconName={BOTTOM_TAB_UI_INFOS[routeName].iconName}
+              color={isFocused ? 'black900' : 'black600'}
+            />
           </TouchableOpacity>
         );
       })}
