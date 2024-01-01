@@ -3,6 +3,7 @@ import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { BottomTabList } from '.';
+import { useNavigationService } from '@hooks/navigation';
 
 type TabBarProps = BottomTabBarProps;
 
@@ -26,6 +27,12 @@ const BOTTOM_TAB_UI_INFOS: Record<
 const TabBar = (props: TabBarProps) => {
   const { bottom } = useSafeAreaInsets();
 
+  const { navigate } = useNavigationService();
+
+  const handlePress = (routeName: keyof BottomTabList) => {
+    return navigate(routeName);
+  };
+
   return (
     <View
       style={StyleSheet.flatten([
@@ -38,7 +45,10 @@ const TabBar = (props: TabBarProps) => {
         const routeName = route.name as keyof BottomTabList;
 
         return (
-          <TouchableOpacity key={route.key} style={styles.item}>
+          <TouchableOpacity
+            key={route.key}
+            style={styles.item}
+            onPress={() => handlePress(routeName)}>
             <SvgICon iconName={BOTTOM_TAB_UI_INFOS[routeName].iconName} />
           </TouchableOpacity>
         );

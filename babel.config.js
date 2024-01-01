@@ -29,6 +29,7 @@ module.exports = {
           '@navigation': './src/navigation',
           '@utils': './src/utils',
           '@design-system': './src/design-system',
+          '@hooks': './src/hooks',
         },
       },
     ],
