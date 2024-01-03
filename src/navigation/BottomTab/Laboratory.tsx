@@ -1,23 +1,28 @@
-import { DS_CONSTANTS, Font, SvgICon } from '@design-system';
+import {
+  DS_CONSTANTS,
+  Font,
+  ScreenTemplate,
+  SvgICon,
+  TopNav,
+} from '@design-system';
 import { useNavigationService } from '@hooks/navigation';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 const LaboratoryTab = () => {
-  const { top } = useSafeAreaInsets();
-
   const { navigate } = useNavigationService();
 
   return (
-    <View
-      style={StyleSheet.flatten([styles.container, { paddingTop: top || 8 }])}>
-      <TouchableOpacity onPress={() => navigate('GlassmorphismScreen')}>
-        <View style={styles.item}>
-          <Font type="title_2_emphasized">Glassmorphism</Font>
-          <SvgICon iconName="right" color="brown500" />
-        </View>
-      </TouchableOpacity>
-    </View>
+    <ScreenTemplate>
+      <TopNav title="실험실" />
+      <ScrollView style={styles.container}>
+        <TouchableOpacity onPress={() => navigate('GlassmorphismScreen')}>
+          <View style={styles.item}>
+            <Font type="title_2_emphasized">Glassmorphism</Font>
+            <SvgICon iconName="right" color="brown500" />
+          </View>
+        </TouchableOpacity>
+      </ScrollView>
+    </ScreenTemplate>
   );
 };
 
