@@ -1,3 +1,4 @@
 import HomeTabScreen from './HomeScreen';
+import GlassmorphismScreen from './GlassmorphismScreen';
 
-export default { HomeTabScreen };
+export default { HomeTabScreen, GlassmorphismScreen };

@@ -3,7 +3,7 @@ import FONT_STYLE from './Font.constants';
 import Colors, { ColorKey } from '../Color';
 import { PropsWithChildren } from 'react';
 
-type FontProps = PropsWithChildren<
+export type FontProps = PropsWithChildren<
   TextProps & {
     type: keyof typeof FONT_STYLE;
     color?: ColorKey;
