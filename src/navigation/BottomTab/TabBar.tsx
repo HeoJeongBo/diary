@@ -22,10 +22,6 @@ const BOTTOM_TAB_UI_INFOS: Record<
     iconName: 'person',
     label: '내 정보',
   },
-  Stories: {
-    iconName: 'book',
-    label: '스토리',
-  },
   LaboratoryTab: {
     iconName: 'pallette',
     label: '랩',

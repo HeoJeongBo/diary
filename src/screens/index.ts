@@ -1,3 +1,4 @@
 import HomeTabScreen from './HomeScreen';
+import StoryScreen from './StoryScreen';
 
-export default { HomeTabScreen };
+export default { HomeTabScreen, StoryScreen };
