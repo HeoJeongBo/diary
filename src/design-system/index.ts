@@ -5,6 +5,7 @@ import Colors, { ColorKey } from './Color';
 import Font from './Font';
 import TopNav from './TopNav';
 import ScreenTemplate from './ScreenTemplate';
+import Stories from './Stories';
 
 // import types
 import type { IconNames } from './SvgIcon/SvgIcon.types';
@@ -18,4 +19,5 @@ export {
   Font,
   TopNav,
   ScreenTemplate,
+  Stories,
 };
