@@ -1,5 +1,4 @@
-import { StyleSheet, View } from 'react-native';
-import { StoryModel } from './';
+import { StyleSheet } from 'react-native';
 import Animated, {
   Extrapolation,
   SharedValue,
@@ -8,6 +7,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import Colors from '../Color';
 import Font from '../Font';
+import { StoryModel } from './';
 
 type StoryProps = {
   story: StoryModel;
