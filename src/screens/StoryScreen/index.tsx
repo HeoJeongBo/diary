@@ -9,7 +9,7 @@ const colorKeyDump: ColorKey[] = [
   'brown500',
 ];
 
-const storyDump = Array.from({ length: 10 }).map((_, idx) => ({
+const storyDump = Array.from({ length: 8 }).map((_, idx) => ({
   id: idx,
   color: colorKeyDump[idx % colorKeyDump.length],
   user: 'Test',

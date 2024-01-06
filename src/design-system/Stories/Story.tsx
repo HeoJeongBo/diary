@@ -1,11 +1,13 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { StoryModel } from './';
 import Animated, {
+  Extrapolation,
   SharedValue,
   interpolate,
   useAnimatedStyle,
 } from 'react-native-reanimated';
 import Colors from '../Color';
+import Font from '../Font';
 
 type StoryProps = {
   story: StoryModel;
@@ -28,6 +30,7 @@ const Story = (props: StoryProps) => {
           pageIndexValue.value,
           [index - 1, index, index + 1],
           [90, 0, -90],
+          Extrapolation.CLAMP,
         )}deg`,
       },
     ],
@@ -39,8 +42,9 @@ const Story = (props: StoryProps) => {
         styles.image,
         animatedStyle,
         { backgroundColor: Colors[story.color] },
-      ]}
-    />
+      ]}>
+      <Font type="large_title_regular">{index}</Font>
+    </Animated.View>
   );
 };
 
