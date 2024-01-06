@@ -1,4 +1,4 @@
 import { BottomTabList } from 'src/navigation/BottomTab';
-import Screens from '@screens';
+import { ScreenRouteList } from 'src/screens/types';
 
-export type AllRouteList = BottomTabList & typeof Screens;
+export type AllRouteList = BottomTabList & ScreenRouteList;
